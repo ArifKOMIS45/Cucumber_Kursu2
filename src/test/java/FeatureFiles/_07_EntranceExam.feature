@@ -1,6 +1,6 @@
 Feature: Entrance Exam Functionality
 
-  @SmokeTest
+  //@SmokeTest
 
   Scenario: Create an Exam and Delete
     Given Navigate to basqar
@@ -15,7 +15,7 @@ Feature: Entrance Exam Functionality
       | addButton |
 
     When User sending the keys in dailog content
-      | nameInput | ArifExam1 |
+      | nameInput | ArifExam134 |
 
 
 
@@ -33,4 +33,4 @@ Feature: Entrance Exam Functionality
       | enteranceSetup    |
       | enteranceExamForm |
 
-    Then User delete the "ArifExam1" from Form content
+    Then User delete the "ArifExam134" from Form content

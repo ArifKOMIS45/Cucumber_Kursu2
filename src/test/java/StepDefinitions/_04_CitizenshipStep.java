@@ -44,4 +44,9 @@ public class _04_CitizenshipStep {
         dc.findAndDelete(element);
 
     }
+
+    @When("^User edit The given \"([^\"]*)\" account to \"([^\"]*)\"$")
+    public void userEditTheGivenAccountTo(String old, String newOne)  {
+       dc.findAndEdit(old,newOne);
+    }
 }

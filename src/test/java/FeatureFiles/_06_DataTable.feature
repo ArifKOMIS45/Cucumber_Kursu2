@@ -15,7 +15,7 @@ Feature: DataTable Functionality
       | addButton |
 
     When User sending the keys in dailog content
-      | nameInput | ismetCountry1 |
+      | nameInput | ismetCountry134 |
       | codeInput | 12311         |
 
     And Click on the element in the Dialog

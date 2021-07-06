@@ -19,7 +19,7 @@ public class _01_LoginSteps {
         WebDriver driver = BaseDriver.getDriver();
         driver.get("https://demo.mersys.io/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^Enter username and password and click login button$")

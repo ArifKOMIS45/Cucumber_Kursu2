@@ -71,6 +71,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']/input")
     private WebElement integrationCode;
 
+    @FindBy(css = "ms-edit-button>button")
+    private WebElement editBtn;
+
 
     public DialogContent() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
@@ -138,6 +141,9 @@ public class DialogContent extends Parent {
             case "deleteDialog":
                 myElement = deleteDialog;
                 break;
+            case "editBtn":
+                myElement = editBtn;
+                break;
         }
         clickFunction(myElement);
     }
@@ -182,5 +188,17 @@ public class DialogContent extends Parent {
         userType.click();
         listSelectOption(myList, option);
     }
+
+    public void findAndEdit(String oldString, String newString) {
+        scrollToUpElement(rightScroll);
+        findAndSend("searchInput", oldString);
+        findAndClick("searchBtn");
+        waitnumberOfElementsToBeLessThan(By.xpath("//ms-delete-button//button"), 5);
+
+        findAndClick("editBtn");
+        findAndSend("nameInput", newString);
+        findAndClick("saveButton");
+    }
+
 
 }

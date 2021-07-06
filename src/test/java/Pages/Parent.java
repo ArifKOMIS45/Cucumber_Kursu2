@@ -11,7 +11,7 @@ import org.testng.Assert;
 import java.util.List;
 
 public class Parent {
-    WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(),10);
+    WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(),5);
 
     public void sendKeysFunction(WebElement element, String value) {
         waitUntilVisible(element); //element gozukene kadar bekle
