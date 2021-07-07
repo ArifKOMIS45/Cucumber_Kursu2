@@ -22,7 +22,8 @@ public class _07_WrittenInTheExcel  {
         Row row=sheet.createRow(0);//satir acildi ama kullanilabilir degil
         Cell cell= row.createCell(0);//hucre olusturuldu A1 hucresi kullanilabilir durumda
         cell.setCellValue("Merhaba Dunya");//bilgi yazildi
-       for (int i = 1; i <10 ; i++) {
+
+        for (int i = 1; i <10 ; i++) {
             cell= row.createCell(i);
             cell.setCellValue(i);
         }
