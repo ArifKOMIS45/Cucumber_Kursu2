@@ -18,7 +18,6 @@ public class Parent {
         scrollToElement(element);//elemente kadar kaydir(javascript)
         element.clear();//elementin icini temizle
         element.sendKeys(value);//degeri gonder
-
     }
 
     public void scrollToUpElement(WebElement element){
@@ -34,7 +33,6 @@ public class Parent {
 
     public static void waitUntilVisible(WebElement element) {
         WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(),20);
-
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 

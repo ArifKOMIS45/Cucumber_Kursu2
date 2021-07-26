@@ -36,7 +36,7 @@ public class _09_Tasks {
             cell.setCellValue(i);
         }
 
-        FileOutputStream outputStream=new FileOutputStream("src/test/java/ApachiPOI/resourse/carpimTablosu1.xlsx");
+        FileOutputStream outputStream=new FileOutputStream("src/test/java/ApachiPOI/resourse/yeniExcel.xlsx");
         workbook.write(outputStream);
         workbook.close();//hafizayi bosalttik
         outputStream.close();//dosyayi kapattik

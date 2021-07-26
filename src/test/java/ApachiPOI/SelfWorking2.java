@@ -33,7 +33,6 @@ public class SelfWorking2 {
         int b=0;
         int a=0;
         while (sayac < 11) {
-
             for (int i = 1; i < 11; i++) {
                 if(row.getRowNum()<11){row = sheet.createRow(b);}
                if (row.getRowNum()>=10){row= sheet.getRow(i-1);}

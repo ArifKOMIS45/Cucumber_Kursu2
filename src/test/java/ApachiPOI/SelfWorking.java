@@ -31,7 +31,6 @@ public class SelfWorking {
 
         int sayac = 1;
 
-
         while (sayac < 11) {
             int rowCount=sheet.getPhysicalNumberOfRows();
 

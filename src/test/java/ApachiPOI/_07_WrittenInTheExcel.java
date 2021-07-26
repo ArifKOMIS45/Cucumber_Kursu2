@@ -19,9 +19,9 @@ public class _07_WrittenInTheExcel  {
         Sheet sheet=workbook.getSheet("Sheet1");
 
         //hafizada olusturma ve yazma islemleri yapiliyor
-        Row row=sheet.createRow(0);//satir acildi ama kullanilabilir degil
+        Row row=sheet.createRow(3);//satir acildi ama kullanilabilir degil
         Cell cell= row.createCell(0);//hucre olusturuldu A1 hucresi kullanilabilir durumda
-        cell.setCellValue("Merhaba Dunya");//bilgi yazildi
+        cell.setCellValue("Merhaba Dunya2");//bilgi yazildi
 
         for (int i = 1; i <10 ; i++) {
             cell= row.createCell(i);

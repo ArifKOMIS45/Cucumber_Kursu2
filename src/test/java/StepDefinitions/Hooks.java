@@ -11,7 +11,6 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Driver;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 

@@ -67,7 +67,7 @@
        </configuration>
    </extentreports>
 
-3- Runner Clasımızı plag in ve diğer ayarlarıyla hazırlıyoruz.
+3- Runner Clasımızı plug in ve diğer ayarlarıyla hazırlıyoruz.
     _05_TestRunnerExtendReport  şeklinde
 
     plugin = {

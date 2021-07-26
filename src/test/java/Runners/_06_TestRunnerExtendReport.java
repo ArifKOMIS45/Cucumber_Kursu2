@@ -2,8 +2,10 @@ package Runners;
 
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
+
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterClass;
+
 
 import java.io.File;
 
@@ -12,7 +14,7 @@ import java.io.File;
         features = {"src/test/java/FeatureFiles/_10_CountryCreateEditDelete.feature"},
         glue = {"StepDefinitions"},
 
-        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReport3.html"
+        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReport1.html"
                }
 )
 
@@ -27,7 +29,7 @@ public class _06_TestRunnerExtendReport extends AbstractTestNGCucumberTests {
         Reporter.setSystemInfo("Application Name", "Basqar");
         Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name").toString());
         Reporter.setSystemInfo("Department", "QAr");
-        Reporter.setSystemInfo("Ek Satir", "Aciklamasi");
+        Reporter.setSystemInfo("Location", "Turkey");
         Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
     }
 
