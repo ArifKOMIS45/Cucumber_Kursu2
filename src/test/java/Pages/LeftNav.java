@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent {
     WebElement myElement;
-    @FindBy(xpath = "(//span[text()='Setup'])[1]")
+    @FindBy(xpath = "//span[text()='Setup']")
     private WebElement setupOne;
 
     @FindBy(xpath = "//span[text()='Parameters']")

@@ -24,7 +24,7 @@ public class Hooks {
         System.out.println("scenario name="+ scenario.getName());
     }
 
-    @After // her senaryodan sonra
+    //@After // her senaryodan sonra
     public void after(Scenario scenario)
     {
         System.out.println("Senaryo Bitti");

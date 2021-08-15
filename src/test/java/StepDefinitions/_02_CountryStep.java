@@ -21,9 +21,10 @@ public class _02_CountryStep {
     public void create_a_country() {
 
         DialogContent dc = new DialogContent();
+        dc.waitnumberOfElementsToBeMoreThan(By.xpath("//tbody/tr"),3);
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput", "Arif Ulkesi yeni123");
-        dc.findAndSend("codeInput", "232");
+        dc.findAndSend("nameInput", "Arif Ulkesi yeni1992322");
+        dc.findAndSend("codeInput", "2322");
         dc.findAndClick("saveButton");
     }
 

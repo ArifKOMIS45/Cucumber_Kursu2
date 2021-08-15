@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class _JDBCParent {
-    protected Statement statement;
+   public static Statement statement;
     private Connection connection;
     @BeforeTest
     public void beforeTest()  {

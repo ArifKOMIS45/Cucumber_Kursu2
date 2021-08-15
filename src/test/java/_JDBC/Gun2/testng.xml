@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Cucumber_Kursu2/src/test/java/_JDBC/Gun2/_04_Example.java">
+        <parameter name="TableName" value="film"></parameter>
+        <parameter name="IstenilenAlan" value="*"></parameter>
+        <classes>
+            <class name="_JDBC.Gun2._04_Example">
+                <methods>
+                    <include name="test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

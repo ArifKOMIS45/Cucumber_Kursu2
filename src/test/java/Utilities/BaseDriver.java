@@ -24,7 +24,7 @@ public class BaseDriver {
         // default setleme yapıldı
         if (threadBrowserName.get() == null)
         {
-            threadBrowserName.set("chrome");
+            threadBrowserName.set("firefox");
         }
 
         if (threadDriver.get() == null) { //bu hatta driver var mı ?

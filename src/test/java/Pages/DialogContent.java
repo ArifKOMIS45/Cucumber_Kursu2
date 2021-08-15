@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class DialogContent extends Parent {
+    public WebElement myElement;
+
     @FindBy(xpath = "(//span[contains(text(),'Dashboard')])[2]")
     public WebElement dashboard;
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
@@ -19,7 +21,7 @@ public class DialogContent extends Parent {
     public WebElement cokies;
     @FindBy(xpath = "//div[contains(text(),'already exist')]")
     public WebElement alreadyExist;
-    WebElement myElement;
+
     List<WebElement> myList;
     @FindBy(id = "mat-input-0")
     private WebElement username;
@@ -27,7 +29,7 @@ public class DialogContent extends Parent {
     private WebElement password;
     @FindBy(xpath = "//span[contains(.,'LOGIN')]")
     private WebElement loginButton;
-    @FindBy(css = "ms-add-button>div>button")
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
     private WebElement nameInput;
@@ -58,6 +60,10 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles']//input")
     private WebElement userType;
 
+    public WebElement getRightScroll() {
+        return rightScroll;
+    }
+
     @FindBy(xpath = "(//div[@class='ps__rail-y'])[2]")
     private WebElement rightScroll;
 
@@ -73,6 +79,9 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "ms-edit-button>button")
     private WebElement editBtn;
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> nameList;
 
 
     public DialogContent() {
