@@ -4,6 +4,7 @@ import Pages.Parent;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseDriver {
@@ -24,7 +25,7 @@ public class BaseDriver {
         // default setleme yapıldı
         if (threadBrowserName.get() == null)
         {
-            threadBrowserName.set("firefox");
+            threadBrowserName.set("chrome");
         }
 
         if (threadDriver.get() == null) { //bu hatta driver var mı ?
@@ -33,7 +34,10 @@ public class BaseDriver {
             switch (threadBrowserName.get()) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    threadDriver.set( new ChromeDriver() );
+                    ChromeOptions options = new ChromeOptions();
+                    options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+                    options.addArguments("window-size=600,480");
+                    threadDriver.set( new ChromeDriver(options) );
                     break;
 
                 case "firefox":
@@ -47,8 +51,7 @@ public class BaseDriver {
     }
 
     public static void DriverQuit() {
-        // bekleme
-        Parent.wait(3);
+          Parent.wait(5);
 
         if (threadDriver.get() != null) {
             threadDriver.get().quit();

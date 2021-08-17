@@ -20,8 +20,7 @@ public class _01_LoginSteps {
         WebDriver driver = BaseDriver.getDriver();
         driver.get("https://demo.mersys.io");
         driver.manage().window().maximize();
-        dc.getWindowSizeSmall(4);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^Enter username and password and click login button$")
@@ -35,7 +34,7 @@ public class _01_LoginSteps {
     @Then("^User should login successfully$")
     public void user_should_login_successfully() {
         // kontrol
-       //dc.getWindowSizeSmall(1);
+       dc.getWindowSizeSmall(2);
         Parent.waitUntilVisible(dc.dashboard);
        Assert.assertTrue(dc.dashboard.getText().equalsIgnoreCase("dashboard"));
     }

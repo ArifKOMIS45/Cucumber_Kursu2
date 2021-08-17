@@ -7,14 +7,14 @@ Feature: Country Create Edit Delete Functionality
     And Navigate to country page
 
   Scenario: Create a Country
-    When Create a country name as "Arif Ulkesi45" code as "45700"
+    When Create a country name as "Arif Ulkesi4512" code as "45700"
     Then Success message should be displayed
 
 
   Scenario: Edit The country
-    When User edit The given "Arif Ulkesi45" account to "Arif Ulkesi1975"
+    When User edit The given "Arif Ulkesi4512" account to "Arif Ulkesi1975"
     Then Success message should be displayed
 
 Scenario: Delete The Country
-    When User delete the "Arif Ulkesi1975"
+    When User delete the "Arif Ulkesi4512"
     Then  Success message should be displayed
