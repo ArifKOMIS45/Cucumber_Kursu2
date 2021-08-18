@@ -43,7 +43,7 @@ public class Parent {
 
     public void clickFunction(WebElement element) {
         waitUntilClickable(element);//element gozukene kadar bekle
-        scrollToElement(element); //elemente kadar kaydir(javascript)
+        //scrollToElement(element); //elemente kadar kaydir(javascript)
         element.click();//click yap
     }
 
@@ -71,26 +71,27 @@ public class Parent {
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
         return elements;
     }
+
     public void waitnumberOfElementsToBeMoreThan(By selector, int number) {
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), 20);
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(selector, number));
     }
-public void getWindowSizeSmall(int count){
-    try {
-        for (int i = 0; i <count ; i++) {
-            Robot rbt = new Robot();
-            rbt.keyPress(KeyEvent.VK_CONTROL);
-            rbt.keyPress(KeyEvent.VK_MINUS);
-            rbt.keyRelease(KeyEvent.VK_MINUS);
-            rbt.keyRelease(KeyEvent.VK_CONTROL);
+
+    public void getWindowSizeSmall(int count) {
+        try {
+            for (int i = 0; i < count; i++) {
+                Robot rbt = new Robot();
+                rbt.keyPress(KeyEvent.VK_CONTROL);
+                rbt.keyPress(KeyEvent.VK_MINUS);
+                rbt.keyRelease(KeyEvent.VK_MINUS);
+                rbt.keyRelease(KeyEvent.VK_CONTROL);
+            }
+        } catch (AWTException e) {
+            e.printStackTrace();
         }
-    } catch (AWTException e) {
-        e.printStackTrace();
+
+
     }
-
-
-
-}
 
     public void listSelectOption(List<WebElement> list, String option) {
         //List den istenen eleman click yapacak

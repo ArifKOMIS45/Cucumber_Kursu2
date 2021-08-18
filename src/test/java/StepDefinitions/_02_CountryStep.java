@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Pages.Parent;
 import Utilities.BaseDriver;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -12,6 +13,7 @@ public class _02_CountryStep {
     @Then("^Navigate to country page$")
     public void navigate_to_country_page() {
         LeftNav ln = new LeftNav();
+        Parent.wait(2);
         ln.findAndClick("setupOne");//Setup click
         ln.findAndClick("parameters");//Parameter Click
         ln.findAndClick("Countries");//Country Click
@@ -23,8 +25,8 @@ public class _02_CountryStep {
         DialogContent dc = new DialogContent();
         dc.waitnumberOfElementsToBeMoreThan(By.xpath("//tbody/tr"),3);
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput", "Arif Ulkesi yeni1992322");
-        dc.findAndSend("codeInput", "2322");
+        dc.findAndSend("nameInput", "Arif Ulkesi yeni12322");
+        dc.findAndSend("codeInput", "232112");
         dc.findAndClick("saveButton");
     }
 

@@ -15,6 +15,6 @@ Feature: Item Categories
 
     Examples:
       | InventoryItemName | UserTypeOption |
-      | Laptopis21328811    | Manager        |
-      | Projectoris228811   | Student        |
-      | Whiteboardis2218811 | Teacher        |
+      | Laptopis2132881111   | Manager        |
+      | Projectoris22881111   | Student        |
+      | Whiteboardis221881111 | Teacher        |

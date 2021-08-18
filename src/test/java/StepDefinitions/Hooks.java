@@ -50,10 +50,17 @@ public class Hooks {
             }
         }
 
-        ExcelUtility.writeExcel("src/test/java/ApachiPOI/resourse/ScenarioStatus.xlsx",
-                scenario, BaseDriver.threadBrowserName.get(), date.format(formatter));
+        try
+        {
+            ExcelUtility.writeExcel("src/test/java/ApachiPOI/resourse/ScenarioStatus.xlsx",
+                    scenario, BaseDriver.threadBrowserName.get(), date.format(formatter));
 
-        BaseDriver.DriverQuit();
+        }
+        finally
+        {
+            BaseDriver.DriverQuit();
+        }
+
     }
 
 }

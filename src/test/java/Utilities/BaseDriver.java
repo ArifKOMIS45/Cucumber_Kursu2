@@ -5,7 +5,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.util.Arrays;
 
 public class BaseDriver {
 
@@ -36,13 +41,22 @@ public class BaseDriver {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
-                    options.addArguments("window-size=600,480");
+                    options.addArguments("force-device-scale-factor=0.75");
+                    options.addArguments("high-dpi-support=0.75");
                     threadDriver.set( new ChromeDriver(options) );
                     break;
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     threadDriver.set( new FirefoxDriver());
+                    break;
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    EdgeOptions option=new EdgeOptions();
+                    option.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+                    option.addArguments("force-device-scale-factor=1");
+                    option.addArguments("high-dpi-support=1");
+                    threadDriver.set( new EdgeDriver(option));
                     break;
             }
         }

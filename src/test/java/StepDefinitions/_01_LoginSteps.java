@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
 public class _01_LoginSteps {
@@ -26,6 +27,7 @@ public class _01_LoginSteps {
     @When("^Enter username and password and click login button$")
     public void enter_username_and_password_and_click_login_button() {
         dc.findAndClick("cokies");
+        //dc.getWindowSizeSmall(4);
         dc.findAndSend("username", "richfield.edu");
         dc.findAndSend("password", "Richfield2020!");
         dc.findAndClick("loginButton");
@@ -33,9 +35,9 @@ public class _01_LoginSteps {
 
     @Then("^User should login successfully$")
     public void user_should_login_successfully() {
-        // kontrol
-       dc.getWindowSizeSmall(2);
+
         Parent.waitUntilVisible(dc.dashboard);
+
        Assert.assertTrue(dc.dashboard.getText().equalsIgnoreCase("dashboard"));
     }
 
