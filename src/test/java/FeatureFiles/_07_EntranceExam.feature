@@ -15,7 +15,7 @@ Feature: Entrance Exam Functionality
       | addButton |
 
     When User sending the keys in dailog content
-      | nameInput | ArifExam134 |
+      | nameInput | ArifExam134222 |
 
 
 
@@ -33,4 +33,4 @@ Feature: Entrance Exam Functionality
       | enteranceSetup    |
       | enteranceExamForm |
 
-    Then User delete the "ArifExam134" from Form content
+    Then User delete the "ArifExam134222" from Form content

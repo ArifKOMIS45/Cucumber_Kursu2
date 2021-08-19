@@ -17,7 +17,7 @@ public class _12_JDBCountrySteps {
         System.out.println("dbList = " + dbList);
         DialogContent dc = new DialogContent();
 
-        dc.getWindowSizeSmall(2);
+       // dc.getWindowSizeSmall(2);
 
         List<WebElement> uiList=dc.waitVisibleListOfAllElements(dc.nameList);
         for(WebElement e: uiList)

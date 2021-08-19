@@ -13,7 +13,7 @@ public class _02_CountryStep {
     @Then("^Navigate to country page$")
     public void navigate_to_country_page() {
         LeftNav ln = new LeftNav();
-        Parent.wait(2);
+
         ln.findAndClick("setupOne");//Setup click
         ln.findAndClick("parameters");//Parameter Click
         ln.findAndClick("Countries");//Country Click
