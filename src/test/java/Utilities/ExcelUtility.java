@@ -127,7 +127,7 @@ public class ExcelUtility {
 
 
     public static void main(String[] args) {
-        List<List<String>> list = getListData("src/test/java/ApachePOI/resource/ApacheExcel2.xlsx",
+        List<List<String>> list = getListData("src/test/java/ApachePOI/resources/ApacheExcel2.xlsx",
                 "testCitizen", 4);
         System.out.println("list = " + list);
 
