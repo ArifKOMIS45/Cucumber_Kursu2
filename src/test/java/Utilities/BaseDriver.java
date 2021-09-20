@@ -40,9 +40,12 @@ public class BaseDriver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
+
                     options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
                     options.addArguments("force-device-scale-factor=0.75");
                     options.addArguments("high-dpi-support=0.75");
+                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
+
                     threadDriver.set( new ChromeDriver(options) );
                     break;
 
