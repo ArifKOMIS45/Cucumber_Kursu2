@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.util.Arrays;
 
 public class BaseDriver {
 
@@ -39,15 +37,24 @@ public class BaseDriver {
             switch (threadBrowserName.get()) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions options = new ChromeOptions();
 
-                    options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+                    if (!runningFromIntelliJ()) { // intellij de çalışmıyorsa
+                        ChromeOptions options = new ChromeOptions();
+                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
+                        threadDriver.set(new ChromeDriver(options));
+                    }
+                    else {
+
+                   ChromeOptions options = new ChromeOptions();
+                   options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
                     options.addArguments("force-device-scale-factor=0.75");
                     options.addArguments("high-dpi-support=0.75");
-                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
+                   threadDriver.set( new ChromeDriver(options) );
+                    }
 
-                    threadDriver.set( new ChromeDriver(options) );
+                    System.out.println("runningFromIntelliJ ? = " + runningFromIntelliJ());
                     break;
+
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
@@ -76,5 +83,11 @@ public class BaseDriver {
             driver =null;
             threadDriver.set(driver);
         }
+    }
+
+    public static boolean runningFromIntelliJ()
+    {
+        String classPath = System.getProperty("java.class.path");
+        return classPath.contains("idea_rt.jar");
     }
 }
