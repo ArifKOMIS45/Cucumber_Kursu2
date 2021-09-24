@@ -44,8 +44,7 @@ public class BaseDriver {
                         threadDriver.set(new ChromeDriver(options));
                     }
                     else {
-
-                   ChromeOptions options = new ChromeOptions();
+                    ChromeOptions options = new ChromeOptions();
                    options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
                     options.addArguments("force-device-scale-factor=0.75");
                     options.addArguments("high-dpi-support=0.75");
@@ -53,6 +52,8 @@ public class BaseDriver {
                     }
 
                     System.out.println("runningFromIntelliJ ? = " + runningFromIntelliJ());
+                    String classPath = System.getProperty("java.class.path");
+                    System.out.print("classPath.toString() = " + classPath);
                     break;
 
 
@@ -88,6 +89,9 @@ public class BaseDriver {
     public static boolean runningFromIntelliJ()
     {
         String classPath = System.getProperty("java.class.path");
-        return classPath.contains("idea_rt.jar");
+        return classPath.contains("junit-rt.jar");
     }
+
+
+
 }
