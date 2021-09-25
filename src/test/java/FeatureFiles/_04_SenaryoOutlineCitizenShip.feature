@@ -21,7 +21,7 @@ Feature: Citizenship with scenario Outline
 
     Examples:
       | CitizenShipName | ShortName |
-      | Arifish4113     | ari41     |
-      | Arifish5113     | ari51     |
-      | Arifish6113     | ari61     |
-      | Arifish7113     | ari71     |
+      | Arifish4110     | ari400     |
+      | Arifish5110     | ari500    |
+      | Arifish6110     | ari600    |
+      | Arifish7110     | ari700    |

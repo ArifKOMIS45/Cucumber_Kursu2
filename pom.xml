@@ -141,7 +141,7 @@
                         <configuration>
                             <includes>
                                 <!-- for  run class or classes-->
-                                <include>**/_05_TestRunnerRegressionWithPlugin.java</include>
+                                <include>**/_05_TestRunnerRegressionTestWithPlugin.java</include>
                             </includes>
                             <testFailureIgnore>true</testFailureIgnore>
                         </configuration>

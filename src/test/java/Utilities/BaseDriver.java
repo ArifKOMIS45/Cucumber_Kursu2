@@ -52,8 +52,6 @@ public class BaseDriver {
                     }
 
                     System.out.println("runningFromIntelliJ ? = " + runningFromIntelliJ());
-                    String classPath = System.getProperty("java.class.path");
-                    System.out.print("classPath.toString() = " + classPath);
                     break;
 
 
@@ -89,7 +87,7 @@ public class BaseDriver {
     public static boolean runningFromIntelliJ()
     {
         String classPath = System.getProperty("java.class.path");
-        return classPath.contains("junit-rt.jar");
+        return classPath.contains("idea_rt.jar");
     }
 
 
