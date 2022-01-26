@@ -10,8 +10,8 @@ import org.testng.annotations.AfterClass;
 import java.io.File;
 
 @CucumberOptions(
-
-        features = {"src/test/java/FeatureFiles/_10_CountryCreateEditDelete.feature"},
+        tags={"@SmokeTest"},
+        features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"},
 
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/html/ExtentReport1.html"

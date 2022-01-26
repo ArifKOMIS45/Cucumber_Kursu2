@@ -1,0 +1,49 @@
+Tell me about your framework?
+
+        My current framework is BDD - Page object model framework.
+
+        Accourding to different page in my website I am creating page classes in the framework.
+
+        I am using feature files which is coming from cucumber(With a cucumber feature files we are able to make framework
+                as BDD ). With Gherking language my test cases are more understandable for every one in the team.(As well as new
+                members to team).
+
+        According to different steps in feature file I am creating steps in step definition package.
+
+        With reusable elements in the page object model and reusable methods from BDD my code will be more maintainable(changeable).
+
+        I am using maven for maintain the dependency(project).
+
+        For reporting I am using extends report and it has all the amount how many features passed how many scenarios passed or
+            failed.
+
+        Extra: In my after class I am taking a screen shot and I can use it for reporting as well.
+
+        This is basically my framework.
+
+
+        If they ask how to run multiple browser?
+            I have a testng.xml file and it is running the RunnerClasses with multiple browsers.
+
+
+
+        Create multiple framework using similar to this methodology.
+
+        -------------------
+
+
+Framework’unuzdan bahsedermisiniz?
+Benim framework’um BDD.Page object model  framework. Web sitemdeki farklı sayfalara göre framework içinde page sınıfları oluşturuyorum.
+Ben Cucumber’dan gelen feature dosyalarını kullanıyorum(Cucumber feature dosyaları ile çerçeveyi BDD olarak yapabiliyoruz).
+Gherking dili ile test senaryolarım ekipteki herkes için daha anlaşılır oluyor. ( Hemde takimin yeni üyeleri icin).
+Feature dosyasındaki farklı adımlara göre Step definition  paketinde adımlar oluşturuyorum. ,
+BDD'den  gelen Page object model  icindeki yeniden kullanılabilir elementler ve metodlar,yazdigim
+kodun daha sürdürülebilir (değiştirilebilir) olmasini sagliyor.
+Projeye bağımlılığı korumak için maven kullanıyorum.
+Raporlama için, genişletme(extend) raporunu kullanıyorum ve  Raporumda kaç tane feature geçtiğini,
+kaç senaryonun geçtiğini veya başarısız olduğunu belirtiliyor.
+EkstraAfterClass’imda bir ekran görüntüsü alıyorum ve bunu raporlama için de kullanabiliyorum. B
+u kisaca benim framework’um.
+Birden çok tarayıcıyı nasıl çalıştıracaklarını sorarlarsa?
+ Bir testng.xml dosyam var ve RunnerClasses'ı birden çok tarayıcıyla çalıştırıyor.
+Bu metodolojiye benzer şekilde birden çok framework oluşturun.

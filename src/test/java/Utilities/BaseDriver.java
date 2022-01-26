@@ -37,19 +37,19 @@ public class BaseDriver {
             switch (threadBrowserName.get()) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-
-                    if (!runningFromIntelliJ()) { // intellij de çalışmıyorsa
-                        ChromeOptions options = new ChromeOptions();
-                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
-                        threadDriver.set(new ChromeDriver(options));
-                    }
-                    else {
+//
+//                    if (!runningFromIntelliJ()) { // intellij de çalışmıyorsa
+//                        ChromeOptions options = new ChromeOptions();
+//                        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400"); //width, height
+//                        threadDriver.set(new ChromeDriver(options));
+//                    }
+//                    else {
                     ChromeOptions options = new ChromeOptions();
                    options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
                     options.addArguments("force-device-scale-factor=0.75");
                     options.addArguments("high-dpi-support=0.75");
                    threadDriver.set( new ChromeDriver(options) );
-                    }
+//                    }
 
                     System.out.println("runningFromIntelliJ ? = " + runningFromIntelliJ());
                     break;
